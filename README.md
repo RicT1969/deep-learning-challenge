@@ -54,8 +54,11 @@ A deep neural network model was defined using the Keras library with TensorFlow 
   <li>The activation function:  "sigmoid" squeezes the output between 0 and 1, making it suitable for binary classification problems. </li>
   <li>Epochs: finally, we defined the number of epochs as 100. This is the number of passes through the entire training dataset during the training process. An epoch is completed when the model has seen and processed every sample in the training dataset once. </li>
   <li>The total number of trainable parameters is shown in the summary (the graphic below). These parameters were subsequently updated during the model training process to optimize its performance on the given task. </li></ul>
+
+  ![image](https://github.com/RicT1969/deep-learning-challenge/assets/124494379/6af8ce9b-01ca-4fd8-ac03-ea49cbe24f3b)
+
   
-<h3>Summary of model 1</h3>
+<h3>Summary of Model 1</h3>
 
 A deep neural network model was compiled using the compile() function in Keras. This used three components. </li><ul>
 <li><b>Loss Function (loss): </b> since the model is being used for a binary classification task (output layer with sigmoid activation), the binary cross-entropy loss function was used. This is a common choice for binary classification problems, measuring the difference between the predicted probabilities and the actual binary labels. </li>
