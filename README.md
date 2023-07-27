@@ -5,7 +5,7 @@
 <p>A CSV file has been supplied containing more than 34,000 organisations that have received funding from Alphabet Soup over the years. Within this dataset are ten columns that capture metadata about each organisation. </p>
 <p>Using TensorFlow, design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup-funded organisation will be successful based on the features in the dataset. Preprocess the data and then compile, train, and evaluate the binary classification model to calculate the model’s loss and accuracy. </p>
 
-<h3>What is a neural network and how it works? </h3>
+<h3>What is a neural network and how does it work? </h3>
 
 <p>The purpose of a neural network is to approximate complex, non-linear relationships between inputs and outputs in data with the result that they can automatically learn patterns and representations from the data, allowing them to make predictions or decisions based on new, unseen data.</P>
 <p> A neural network is composed of interconnected artificial neurons organized into layers. The most common type of neural network is the feedforward neural network, where data flows in one direction from input to output through a series of hidden layers. These consist of: </p><ul>
@@ -23,6 +23,8 @@
 
 <h3>Data Preprocessing</h3><ol>
   <li>The data was imported into a pandas’ DataFrame for review and preprocessing.</li>
+
+  
   <li>The EIN and Name columns were dropped as they provided no information relevant to the modelling. </li>
   <li>The number of unique values in each column were extracted and reviewed. The purpose of this was to identify columns with significant numbers of unique categorical values many of which only appear in the dataset on a few occasions. This means that converting the categorical data into numeric data would have produced too large a dataset for efficient processing without meaningful input to the model’s results</li><ul>
   <li>Two columns were identified: </li><ul>
@@ -74,6 +76,9 @@ A deep neural network model was compiled using the compile() function in Keras. 
 <li>The model fell short of the aim to get 75% accuracy. </li>
 <li>The training data on its final run through got to roughly this figure between 25 and 30 epochs. By the 100th epoch the accuracy was measured at 74.1% and loss at 53.2%, a noticeable difference to the test scores, suggesting that the model was overfitted, and had begun to learn the training data. This is undesirable as it means that the model is less able to generalise to new data sets and is likely to give poor results. </li></ul>
 
+<h2>Opimisation</h2><ul>
 
+
+<h3>Model 2</h3><ul>
 https://stackoverflow.com/questions/24109779/running-get-dummies-on-several-dataframe-columns
 https://machinelearningmastery.com/how-to-configure-the-number-of-layers-and-nodes-in-a-neural-network/
