@@ -23,7 +23,8 @@
 
 <h3>Data Preprocessing</h3><ol>
   <li>The data was imported into a pandas’ DataFrame for review and preprocessing.</li>
-![image](https://github.com/RicT1969/deep-learning-challenge/assets/124494379/a84877f0-4e01-4cd0-9535-1b89337011a2)
+![image](https://github.com/RicT1969/deep-learning-challenge/assets/124494379/2f8013e2-5109-4c99-8065-7257b617c4b7)
+
   <li>The EIN and Name columns were dropped as they provided no information relevant to the modelling. </li>
   <li>The number of unique values in each column were extracted and reviewed. The purpose of this was to identify columns with significant numbers of unique categorical values many of which only appear in the dataset on a few occasions. This means that converting the categorical data into numeric data would have produced too large a dataset for efficient processing without meaningful input to the model’s results</li><ul>
   <li>Two columns were identified: </li><ul>
