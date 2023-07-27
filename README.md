@@ -62,7 +62,9 @@ A deep neural network model was compiled using the compile() function in Keras. 
 <h3>Training</h3><ul>
   
 <li>During training, the model aims to minimise the binary cross-entropy loss using the Adam optimizer while evaluating its progress based on accuracy. The training process involves feeding the input data, computing the gradients, and updating the model's parameters (weights and biases) iteratively until convergence or a specified number of epochs is reached. </li></ul>
-<h3>Evaluation<h3><ul>
+
+<h3>Evaluation</h3><ul>
+  
 <li>The trained deep neural network model was evaluated using the test data (X_test_scaled and y_test). The evaluate() function in Keras was used for this purpose. </li>
 <li>The X_test_scaled is the test data containing the input features (scaled) on which the model is evaluated and the y_test is the corresponding ground truth (actual) labels for the test data. </li>
 <li>The model evaluation is based on the loss and accuracy of the model compared to the test data. </li></ul>
