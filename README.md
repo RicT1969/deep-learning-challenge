@@ -1,4 +1,6 @@
 # deep-learning-challenge
+
+<h3>Challenge Report</h3>
 <h2>Overview</h2>
 
 <p>The purpose of this challenge is to create a tool that can help a fictional nonprofit foundation (Alphabet Soup) select applicants for funding with the best chance of success in their ventures. We are asked to design a neural network a binary classifier that can predict whether applicants will be successful if funded. </p>
