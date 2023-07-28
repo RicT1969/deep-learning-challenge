@@ -29,7 +29,7 @@
   
 ![image](https://github.com/RicT1969/deep-learning-challenge/assets/124494379/1b4df3d4-2b37-4c5f-ace1-6a33c5f4e2c3)
 
-  <li>The <b>Is_Succesful</b> column is the dependetn or target variable. This column contains the records of whether a funded venture was successful and is the measure that the model will be trying to predict. The remaining columns form the dependent variables, or features, which we will be using to train the model.</li> 
+  <li>The <b>Is_Succesful</b> column is the dependent or target variable. This column contains the records of whether a funded venture was successful and is the measure that the model will be trying to predict. The remaining columns form the independent variables or features which we will be using to train the model.</li> 
   <li>The EIN and Name columns were dropped as they provided no information relevant to the modelling. </li>
   <li>The number of unique values in each column were extracted and reviewed. The purpose of this was to identify columns with significant numbers of unique categorical values many of which only appear in the dataset on a few occasions. This means that converting the categorical data into numeric data would have produced too large a dataset for efficient processing without meaningful input to the model’s results</li><ul>
   <li>Two columns were identified: </li><ul>
