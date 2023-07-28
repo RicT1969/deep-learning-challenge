@@ -4,6 +4,7 @@
 <p>The purpose of this challenge is to create a tool that can help a fictional nonprofit foundation (Alphabet Soup) select applicants for funding with the best chance of success in their ventures. We are asked to design a neural network a binary classifier that can predict whether applicants will be successful if funded. </p>
 <p>A CSV file has been supplied containing more than 34,000 organisations that have received funding from Alphabet Soup over the years. Within this dataset are ten columns that capture metadata about each organisation. </p>
 <p>Using TensorFlow, design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup-funded organisation will be successful based on the features in the dataset. Preprocess the data and then compile, train, and evaluate the binary classification model to calculate the model’s loss and accuracy. </p>
+<p>Test the model and then experiment with hyperparameter optimisation to improve the model output to 75% or better. 3 additional models are included within he repository showing the results of attempted optimisation, with the final one using </p>
 
 <h3>What is a neural network and how does it work? </h3>
 
