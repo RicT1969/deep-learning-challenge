@@ -78,14 +78,85 @@ A deep neural network model was compiled using the compile() function in Keras. 
   
 <h3>Results: </h3><ul>
 
-![image](https://github.com/RicT1969/deep-learning-challenge/assets/124494379/9da89449-2844-409b-ba8b-ce4dc922b795)
+
+<img width="395" alt="image" src="https://github.com/RicT1969/deep-learning-challenge/assets/124494379/8d64187e-43bb-400a-8ec9-6375c2c359d3">
+
+
 
 <li>The model fell short of the aim to get 75% accuracy. </li>
 <li>The training data on its final run through got to roughly this figure between 25 and 30 epochs. By the 100th epoch the accuracy was measured at 74.1% and loss at 53.2%, a noticeable difference to the test scores, suggesting that the model was overfitted, and had begun to learn the training data. This is undesirable as it means that the model is less able to generalise to new data sets and is likely to give poor results. </li></ul>
 
 <h2>Opimisation</h2><ul>
 
+<li>A number of models were run with different combinations of hyperparameters. For the purposes of this challenge the hyperparameters chosen were the number of nodes per layer, the number of layers, the number of epochs and different combinations of three activation functions: sigmoid, reLU and tanh. Given this is a binary classification problem, the activation function applied to the output layer remained sigmoid.</li> 
+<li>Included here are the results of <b>two</b> of these attempts. The second model includes a significant reduction in epochs, and the third is the most accurate attempt by manual trial and effort.</li>
+<li>Finally, keras_tuner was used in order to see whether it was possible to achieve a better result closer or greater than 75%. The auto-tune method represents a “brute “force” method of testing each combination within the range of parameters set. It is expensive in terms of tie, so the range of parameters tested were constrained to the ranges tested in the trial and error attempts, with a maximum of 30 epochs.</li>
+<p><b>Note:</b> the results are summarised using the following conventions – the number of nodes are written per layer with a “/” separating the layers; similarly the activation functions used per layer are also seperated by a “/”. The first and last layers refer to the input and output layers respectively.</li></ul>
+<h3><b>Summary Model 2</b></h3></ul>
+<p><b>Parameters</b></p>
+<li>layers: 3</li>
+<li>nodes: 25 / 10 / 1</li>
+<li>Activation function: relu/relu/sigmoid</li>
+<li>Epochs: 30</li></ul>
 
-<h3>Model 2</h3><ul>
+<img width="344" alt="image" src="https://github.com/RicT1969/deep-learning-challenge/assets/124494379/02a5aa05-ab26-4e3f-af02-71542b21d5f7">
+
+
+<p><b>Results</b></p><ul>
+<li>The model recorded no real difference in terms of accuracy and loss for the testing set</li>
+<li>Nonetheless the reduction of epochs to 30 resulted in a closer result between training and testing data: the training data recorded 73.6% accuracy compared to the testing model’s 72.6% showing a closer result and therefore a reduced likelihood of overfitting. </li></ul> 
+
+<img width="439" alt="image" src="https://github.com/RicT1969/deep-learning-challenge/assets/124494379/b5d7a4f0-5c03-4496-954b-59996f517e7e">
+
+<h3><b>Summary Model 3</b></h3>
+<p><b>Parameters</b></p>
+<li>layers: 4</li>
+<li>nodes: 10 / 18 / 8 / 1</li>
+<li>Activation function: reLU / tanh / tanh / sigmoid</li>
+<li>Epochs: 30</li></ul>
+
+<img width="343" alt="image" src="https://github.com/RicT1969/deep-learning-challenge/assets/124494379/bf189178-56e0-49fa-a92d-9c73a89c1a36">
+
+<p><b>Results</b></p><ul>
+<li>The model recorded no real difference in terms of accuracy and loss for the testing set</li>
+<li>Nonetheless it achieved a closer result between training and testing data: the training data recorded 73.5% accuracy compared to the testing model’s 72.8% showing a closer result than previously between the two sets. </li>
+<li>The results did not show much improvement in accuracy and loss, given the minor variations between the outputs. Broadly the use of four layers, the application of reLU in the first layer and the tanh in the remaining hidden layers appeared the most favourable and gave the best indication that there was no overfitting. </li></ul>
+
+<img width="409" alt="image" src="https://github.com/RicT1969/deep-learning-challenge/assets/124494379/4ecc782d-5731-483c-8ad2-51268a20366a">
+
+
+<h3><b>Auto-Tune Hyperparameters</b></h3>
+<p>Having had disappointing results with manual experimentation, an auto-tuner was used to see if the results could be improved.</p>
+<p><b>Parameters</b></p><ul>
+<li>layers: 3</li>
+<li>nodes for the hidden layer: 26</li>
+<li>Activation function for the hidden layer: tanh </li>
+<li>Epochs: 20</li></ul>
+
+
+<p><b>Results</b></p><ul>
+<p><i>Report on the parameters for the auto-tune process</i></p>
+ <img width="320" alt="image" src="https://github.com/RicT1969/deep-learning-challenge/assets/124494379/cd79b386-867a-4bdb-99d9-26ac1e6e8aaa">
+<li>The hyperparameter tuning process has resulted in a neural network model with an accuracy of around 73.21% on the test data.</li>
+<li>This is an improvement on our earlier attemptes at hyperparameter tuning, but is still not at the desired minimum 75% accuracy.</li></ul>
+
+<img width="274" alt="image" src="https://github.com/RicT1969/deep-learning-challenge/assets/124494379/73473af4-9657-4304-baae-2eb0c4019630">
+<img width="401" alt="image" src="https://github.com/RicT1969/deep-learning-challenge/assets/124494379/3fb29708-a00c-4aa5-91ce-bb60e97cddbe"
+  
+
+
+<p><h3>Further steps</h3></p>
+<li>Experiment with different activation functions for the hidden layers trying others like Leaky ReLU, ELU, or SELU.</li>
+<li>Implement regularization techniques like L1 and L2 regularization to prevent overfitting. These techniques add penalty terms to the loss function based on the magnitude of weights, encouraging the model to prefer simpler solutions.</li>
+<li>Adjust the learning rate of the optimizer to control the step size during gradient updates. A smaller learning rate can make the training process more stable, but it might require more epochs for convergence.</li>
+<li>Experiment with different optimizers like RMSprop, Adamax, or Nadam to see if they lead to improved convergence and generalization.</li>
+<li>Undertake further feature engineering - for instance Principle Component Analysis will remove features that do not provide much information, simplifying the data set, removing noise and improving the model's efficiency. </li>
+<li>Tune the batch size used during training. Smaller batch sizes may introduce more randomness and noise during updates, potentially leading to better generalization.</li>
+<li>Experiment with ensemble methods, such as combining the predictions of multiple neural network models or using other machine learning algorithms, like Random Forest or Gradient Boosting, to create a more powerful ensemble model.</li>
+<li>Use K-fold cross-validation to get a more reliable estimate of the model's performance and avoid overfitting to a specific train-test split.</li>
+<li>Implement early stopping based on the model's performance on the validation set to prevent overfitting and save computation time.</li>
+
+<h2>Sources</h2>
 https://stackoverflow.com/questions/24109779/running-get-dummies-on-several-dataframe-columns
 https://machinelearningmastery.com/how-to-configure-the-number-of-layers-and-nodes-in-a-neural-network/
+https://keras.io/guides/keras_tuner/getting_started/
