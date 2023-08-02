@@ -87,7 +87,7 @@ A deep neural network model was compiled using the compile() function in Keras. 
 
 
 <li>The model fell short of the aim to get 75% accuracy. </li>
-<li>The training data on its final run through got to roughly this figure between 25 and 30 epochs. By the 100th epoch the accuracy was measured at 74.1% and loss at 53.2%, a noticeable difference to the test scores, suggesting that the model was overfitted, and had begun to learn the training data. This is undesirable as it means that the model is less able to generalise to new data sets and is likely to give poor results. </li></ul>
+<li>The training data on its final run through got to roughly this figure between 25 and 30 epochs. By the 100th epoch the accuracy was measured at 72.8% and loss at 53.2%, a noticeable difference to the test scores, suggesting that the model was overfitted, and had begun to learn the training data. This is undesirable as it means that the model is less able to generalise to new data sets and is likely to give poor results. </li></ul>
 
 <h2>Opimisation</h2><ul>
 
